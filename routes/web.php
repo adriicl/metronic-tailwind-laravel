@@ -15,7 +15,7 @@ Route::get('/',  [DashboardController::class, 'index'])
 
 Route::get('/profile', [UserController::class, 'edit'])->name('profile.edit');
 Route::put('/profile', [UserController::class, 'update'])->name('profile.update');
-
+Route::get('/user-profile', [UserController::class, 'show'])->name('user-profile');
 Route::get('/user-profile', [UserController::class, 'show'])
 ->name('user-profile')
     ->breadcrumbs( function (Trail $trail) {

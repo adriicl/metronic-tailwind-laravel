@@ -10,10 +10,13 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function show(User $user)
+    public function show()
     {
-        // Show the user profile
-        return view('user-profile', compact('user'));
+        // Recupera el último usuario añadido
+        $lastUser = User::latest()->first();
+
+        // Pasa el usuario a la vista
+        return view('user-profile', compact('lastUser'));
     }
 
     public function edit()
@@ -48,7 +51,7 @@ class UserController extends Controller
         // Guarda los cambios
         $user->save();
 
-        // Redirige con éxito
+
         return back()->with('success', 'Perfil actualizado correctamente.');
     }
 }
