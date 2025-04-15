@@ -5,7 +5,6 @@
         @include('layouts.sidebar')
         <div class="wrapper flex grow flex-col">
             @include('layouts.header')
-            {{-- @include('layouts.breadcrumbs') --}}
             <main class="grow content pt-5" id="content" role="content">
                 <!-- begin: container -->
                 <div class="container-fixed" id="content_container">

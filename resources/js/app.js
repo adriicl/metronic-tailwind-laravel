@@ -1,5 +1,5 @@
 import "./bootstrap";
 
 import "../metronic/core/index";
-import "../metronic/app/layouts/demo1";
+import "../metronic/app/layouts/main";
 
